@@ -15,8 +15,7 @@ public class HomeController {
 
 	@RequestMapping(value = { "/", "/home" })
 	public String home(@Value("#{session.getAttribute('username')}") String username, Model model) {
-		if (username != null) {
-			// hello world
+		if (username != null) {			
 			return "main";
 		} else {
 			return "home";
